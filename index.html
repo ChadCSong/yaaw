@@ -168,7 +168,7 @@
       </div>
       <form id="add-task-uri">
         <div class="input-append">
-          <input type="text" name="uri" id="uri-input" class="input-clear" placeholder="HTTP, FTP or Magnet" /><span><a id="torrent-up-btn" class="btn">Upload Torrent<input type="file" id="torrent-up-input" /></a></span>
+          <input type="text" name="uri" id="uri-input" class="input-clear" placeholder="HTTP, FTP or Magnet" /><span><a id="torrent-up-btn" class="btn">上传种子<input type="file" id="torrent-up-input" /></a></span>
         </div>
         <textarea id="uri-textarea" rows=5 class="input-clear hide" placeholder="HTTP, FTP or Magnet"></textarea>
       </form>
@@ -218,13 +218,13 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label">Finish Notification</label>
+            <label class="control-label">结束后通知</label>
             <div class="controls">
               <label class="radio inline">
-                <input type="radio" name="finish_notification" value="1" checked> Enable
+                <input type="radio" name="finish_notification" value="1" checked> 启用
               </label>
               <label class="radio inline">
-                <input type="radio" name="finish_notification" value="0"> Disable
+                <input type="radio" name="finish_notification" value="0"> 禁用
               </label>
             </div>
           </div>
@@ -277,7 +277,7 @@
       {{^tasks}}
       <li>
         <div class="empty-tasks">
-          <strong>No Active Tasks</strong>
+          <strong>还没有任务</strong>
         </div>
       </li>
       {{/tasks}}
@@ -388,13 +388,13 @@
       <form id="add-task-option" class="form-horizontal" onsubmit="$('#add-task-uri').submit();return false">
 	  <input type="submit" style="position:fixed;top:0;visibility:hidden"/>
         <div class="control-group">
-          <label class="control-label" for="ati-out">File Name</label>
+          <label class="control-label" for="ati-out">文件名</label>
           <div class="controls">
             <input id="ati-out" class="input-xlarge input-clear" name="out" />
           </div>
         </div>
         <div class="control-group">
-          <label class="control-label" for="ati-dir">Dir</label>
+          <label class="control-label" for="ati-dir">存储位置</label>
           <div class="controls">
             <input id="ati-dir" class="input-xlarge" name="dir" />
           </div>
@@ -404,7 +404,7 @@
           <div class="controls">
             <label class="checkbox">
               <input type="checkbox" name="pause" class="input-save" {{#pause}}checked{{/pause}} />
-              Pause When Added
+              添加后暂停
             </label>
           </div>
         </div>
@@ -412,7 +412,7 @@
           <div class="controls">
             <label class="checkbox">
               <input type="checkbox" name="parameterized-uri" class="input-save" {{#parameterized-uri}}checked{{/parameterized-uri}} />
-              Parameterized URI
+              参数化的URI
             </label>
           </div>
         </div>
@@ -455,13 +455,13 @@
       <hr />
       <form id="aria2-gs-form" class="form-horizontal" onsubmit="false">
         <div class="control-group half">
-          <label class="control-label" for="gsi-dl">Download Limit</label>
+          <label class="control-label" for="gsi-dl">下载限制</label>
           <div class="controls">
             <input id="gsi-dl" name="max-overall-download-limit" class="input-small" value="{{max-overall-download-limit}}" />
           </div>
         </div>
         <div class="control-group half">
-          <label class="control-label" for="gsi-ul">Upload Limit</label>
+          <label class="control-label" for="gsi-ul">上传限制</label>
           <div class="controls">
             <input id="gsi-ul" name="max-overall-upload-limit" class="input-small" value="{{max-overall-upload-limit}}" />
           </div>
@@ -473,7 +473,7 @@
           </div>
         </div>
         <div class="control-group half">
-          <label class="control-label" for="gsi-mss">Min Split Size</label>
+          <label class="control-label" for="gsi-mss">最小分片大小</label>
           <div class="controls">
             <input id="gsi-mss" name="min-split-size" class="input-small" value="{{#_v.format_size_0}}{{min-split-size}}{{/_v.format_size_0}}" />
           </div>

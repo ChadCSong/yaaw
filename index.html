@@ -20,7 +20,7 @@
 <html lang="en" manifest="offline.appcache">
   <head>
     <meta charset=utf-8 />
-    <title>Yet Another Aria2 Web Frontend</title>
+    <title>小宝家的下载机</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
     <meta name="author" content="Binux" />
     
@@ -35,7 +35,7 @@
   <body>
     <div class="container">
       <header class="main-head page-header">
-        <h1>Yet Another Aria2 Web Frontend</h1>
+        <h1>小宝家的下载机</h1>
         <span id="offline-cached"></span>
         <div id="global-info" class="pull-right">
           <div id="global-version"></div>
@@ -71,7 +71,7 @@
         <div class="pull-left" id="not-selected-grp">
           <div class="pull-left btn-group">
             <a class="btn" id="add-task-btn" data-toggle="modal" href="#add-task-modal" rel="tooltip" title="Add Task">
-              <i class="icon-plus"></i> Add
+              <i class="icon-plus"></i> 添加任务
             </a>
           </div>
           <div class="pull-left btn-group" id="do-all-btn">
@@ -107,7 +107,7 @@
         <div class="pull-right" id="other-grp">
           <div class="btn-group">
             <a href="#" class="btn" id="refresh-btn" rel="tooltip" title="Refresh">
-              <i class="icon-refresh"></i> Refresh
+              <i class="icon-refresh"></i> 刷新
             </a>
             <a class="btn" id="setting-btn" data-toggle="modal" href="#setting-modal" rel="tooltip" title="Settings">
               <i class="icon-wrench"></i>
@@ -118,12 +118,12 @@
 
       <section id="active-tasks">
       <div class="section-header">
-        <i class="icon-chevron-down"></i><b>Active Tasks</b>
+        <i class="icon-chevron-down"></i><b>进行中的任务</b>
       </div>
       <ul class="tasks-table" id="active-tasks-table">
         <li>
           <div class="empty-tasks">
-            <strong>No Active Tasks</strong>
+            <strong>所有的任务都完成了</strong>
           </div>
         </li>
       </ul>
@@ -131,12 +131,12 @@
 
       <section id="other-tasks">
       <div class="section-header">
-        <i class="icon-chevron-down"></i><b>Other Tasks</b>
+        <i class="icon-chevron-down"></i><b>其他任务</b>
       </div>
       <ul id="waiting-tasks-table" class="tasks-table">
         <li>
           <div class="empty-tasks">
-            <strong>No Tasks</strong>
+            <strong>没有任务</strong>
           </div>
         </li>
       </ul>
@@ -145,10 +145,10 @@
     </div>
 
     <ul id="task-contextmenu" class="dropdown-menu">
-      <li class="task-restart"><a href="#" id="menuRestart" >ReStart</a></li>
-      <li class="task-start"><a href="#" id="menuStart" >Start</a></li>
-      <li><a href="#" id="menuPause" >Pause</a></li>
-      <li><a href="#" id="menuRemove" >Remove</a></li>
+      <li class="task-restart"><a href="#" id="menuRestart" >重新开始</a></li>
+      <li class="task-start"><a href="#" id="menuStart" >开始</a></li>
+      <li><a href="#" id="menuPause" >暂停</a></li>
+      <li><a href="#" id="menuRemove" >删除</a></li>
       <li class="task-move divider"></li>
       <li class="task-move"><a href="#" id="menuMoveTop" >MoveTop</a></li>
       <li class="task-move"><a href="#" id="menuMoveUp" >MoveUp</a></li>
@@ -159,7 +159,7 @@
     <section class="modal hide fade" id="add-task-modal">
     <div class="modal-header">
       <button class="close" data-dismiss="modal">×</button>
-      <h3>Add Task</h3>
+      <h3>添加任务</h3>
     </div>
     <div class="modal-body">
       <div id="add-task-alert" class="alert alert-error hide">
@@ -198,7 +198,7 @@
             </div>
           </div>
           <div class="control-group">
-            <label class="control-label">Auto Refresh</label>
+            <label class="control-label">自动刷新</label>
             <div class="controls">
               <label class="radio inline">
                 <input type="radio" name="refresh_interval" value="1000"> 1s
